@@ -1,0 +1,79 @@
+
+.filtersContainer {
+  background-color: #1f2833; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #c5c6c7; 
+}
+
+.filterGroup {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #45a29e; 
+  padding-bottom: 20px;
+}
+.filterGroup:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.filterGroup h5 {
+  color: #66fcf1; 
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.filtersContainer input[type="text"],
+.filtersContainer input[type="number"] {
+  background-color: #0b0c10;
+  color: #fff;
+  border: 1px solid #45a29e;
+}
+.filtersContainer input[type="text"]:focus,
+.filtersContainer input[type="number"]:focus {
+  background-color: #0b0c10;
+  color: #fff;
+  border-color: #66fcf1;
+  box-shadow: 0 0 8px rgba(102, 252, 241, 0.5);
+}
+
+.priceInputs {
+  gap: 10px; 
+}
+
+.brandList {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.brandList :global(.form-check-input) {
+  background-color: #0b0c10;
+  border-color: #45a29e;
+}
+.brandList :global(.form-check-input:checked) {
+  background-color: #66fcf1;
+  border-color: #66fcf1;
+}
+
+.filterActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filterActions :global(.btn-secondary) {
+  background-color: #6c757d;
+  border: none;
+}
+.filterActions :global(.btn-info) {
+  background-color: #45a29e;
+  color: #0b0c10;
+  font-weight: bold;
+  border: none;
+}
+.filterActions :global(.btn-info:hover) {
+  background-color: #66fcf1;
+}

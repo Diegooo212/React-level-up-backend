@@ -1,0 +1,14 @@
+.featuredSection {
+  background: #0d0d1a;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff0080;
+  text-shadow: 0px 0px 12px rgba(255, 0, 128, 0.8);
+}
+

@@ -1,0 +1,74 @@
+/* src/style/adminDashboard.css */
+
+.admin-dashboard-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.dashboard-cards-grid {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px; 
+}
+
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  border-radius: 12px;
+  color: #ffffff; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  min-height: 140px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+.card-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.card-content .card-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 5px 0;
+}
+.card-content .card-info {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card-icon {
+  margin-right: 20px;
+  font-size: 3.5rem; 
+  opacity: 0.3;
+}
+
+
+
+.dashboard-card.blue {
+  
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.dashboard-card.green {
+  
+  background: linear-gradient(135deg, #10b981, #047857);
+}
+
+.dashboard-card.yellow {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}

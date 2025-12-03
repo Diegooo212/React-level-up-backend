@@ -1,0 +1,68 @@
+[
+  {
+    "name": "PlayStation 5",
+    "description": "Sumérgete en mundos con un nuevo nivel de realismo. Tiempos de carga ultrarrápidos con SSD.",
+    "brand": "Sony",
+    "category": "consola",
+    "price": 699990,
+    "discountPrice": 0,
+    "onSale": false,
+    "stock": 15,
+    "img": "https://pcmaniaks.com/10030-large_default/sony-ps5-playstation-5-slim-standard-1tb.jpg"
+  },
+  {
+    "name": "Xbox Series X",
+    "description": "La consola Xbox más potente. Disfruta de juegos 4K a 120 FPS.",
+    "brand": "Microsoft",
+    "category": "consola",
+    "price": 639990,
+    "discountPrice": 599990,
+    "onSale": true,
+    "stock": 8,
+    "img": "https://placehold.co/300x200/1f2833/66fcf1?text=XboxSX"
+  },
+  {
+    "name": "Nintendo Switch OLED",
+    "description": "Tu vida, tus juegos. Pantalla OLED de 7 pulgadas.",
+    "brand": "Nintendo",
+    "category": "consola",
+    "price": 349990,
+    "discountPrice": 0,
+    "onSale": false,
+    "stock": 20,
+    "img": "https://placehold.co/300x200/1f2833/66fcf1?text=Switch"
+  },
+  {
+    "name": "Logitech G Pro X Headset",
+    "description": "Diseñados para E-Sports. Claridad de audio profesional.",
+    "brand": "Logitech",
+    "category": "accesorio",
+    "price": 129990,
+    "discountPrice": 0,
+    "onSale": false,
+    "stock": 25,
+    "img": "https://home.ripley.cl/store/Attachment/WOP/D345/2000381275286/2000381275286_2.jpg"
+  },
+  {
+    "name": "Silla Gamer Cougar Armor One",
+    "description": "Comodidad total para tus maratones de juego. Diseño ergonómico.",
+    "brand": "Cougar",
+    "category": "silla gamer",
+    "price": 149990,
+    "discountPrice": 0,
+    "onSale": false,
+    "stock": 10,
+    "img": "https://todoclick.cl/5433016-large_default/silla_gamer_cougar_armor_one_royal_120kg_3marrgld_0001.jpg"
+  },
+  {
+    "name": "PC Gamer MSI Aegis RS",
+    "description": "Domina cualquier juego. Intel Core i9, NVIDIA RTX 4080.",
+    "brand": "MSI",
+    "category": "computador",
+    "price": 2499990,
+    "discountPrice": 0,
+    "onSale": false,
+    "stock": 5,
+    "img": "https://placehold.co/300x200/1f2833/e67e22?text=MSI+Aegis"
+  }
+]

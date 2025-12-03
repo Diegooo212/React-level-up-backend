@@ -1,0 +1,250 @@
+/* src/style/adminProductos.css */
+
+/* Contenedor general de la página */
+.admin-page-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Cabecera (Título y botón) */
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.admin-page-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.admin-add-btn {
+  background-color: #10b981; /* Verde */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.admin-add-btn:hover {
+  background-color: #059669;
+}
+
+/* Contenedor de la tabla (para sombra y bordes) */
+.admin-table-container {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden; /* Para que los bordes redondeados se vean */
+}
+
+/* Tabla */
+.admin-products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-products-table th,
+.admin-products-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb; /* Gris claro */
+}
+
+/* Cabecera de la tabla */
+.admin-products-table th {
+  background-color: #f9fafb; /* Fondo gris muy claro */
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* Imagen en la tabla */
+.table-product-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Botones de acción en la tabla */
+.admin-edit-btn,
+.admin-delete-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 8px;
+  transition: background-color 0.2s;
+}
+.admin-edit-btn {
+  background-color: #3b82f6; /* Azul */
+  color: white;
+}
+.admin-edit-btn:hover {
+  background-color: #2563eb;
+}
+.admin-delete-btn {
+  background-color: #ef4444; /* Rojo */
+  color: white;
+}
+.admin-delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* --- ESTILOS DEL MODAL --- */
+
+/* Fondo oscuro semi-transparente */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Contenedor blanco del formulario */
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px; /* Ancho máximo del formulario */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Altura máxima */
+  overflow-y: auto; /* Scroll si el formulario es muy largo */
+}
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* Formulario */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre grupos de formulario */
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #374151;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db; /* Borde gris */
+  border-radius: 6px;
+  box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+  font-size: 1rem;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Fila para poner Precio y Stock juntos */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+.form-row .form-group {
+  flex: 1; /* Ocupan el mismo espacio */
+}
+
+/* Botones de acción del formulario */
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* Alinea botones a la derecha */
+  gap: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+
+.form-actions .btn-cancel,
+.form-actions .btn-save {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.form-actions .btn-cancel {
+  background-color: #e5e7eb; /* Gris claro */
+  color: #374151;
+}
+.form-actions .btn-cancel:hover {
+  background-color: #d1d5db;
+}
+.form-actions .btn-save {
+  background-color: #3b82f6; /* Azul */
+  color: white;
+}
+.form-actions .btn-save:hover {
+  background-color: #2563eb;
+}
+
+/* --- (Pega esto al final de src/style/adminProductos.css) --- */
+
+/* Estilo para el input de búsqueda */
+.admin-search-input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db; /* Borde gris */
+  width: 100%; /* Ocupa espacio disponible */
+  max-width: 400px; /* Un ancho máximo */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.admin-search-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Azul al enfocar */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Ajuste en el header para que quepa el input */
+.admin-page-header {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px; /* Añade espacio entre elementos */
+}
+
+.admin-page-header h1 {
+  flex-grow: 1; /* El título toma espacio */
+  min-width: 200px; /* Ancho mínimo para el título */
+}
+
+.admin-page-header .admin-search-input {
+    flex-grow: 2; /* El input de búsqueda toma más espacio */
+    min-width: 250px; /* Ancho mínimo */
+}
+
+.admin-page-header .admin-add-btn {
+    flex-shrink: 0; /* Evita que el botón se encoja */
+}

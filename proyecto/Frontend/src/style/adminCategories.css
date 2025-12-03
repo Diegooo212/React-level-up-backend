@@ -1,0 +1,33 @@
+/* src/style/adminCategories.css */
+
+/* Reutilizamos clases de adminProductos.css
+   Definimos solo lo específico de categorías
+*/
+
+.admin-categories-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-categories-table th,
+.admin-categories-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-categories-table th {
+  background-color: #f9fafb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+.table-category-img {
+  width: 100px; 
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+

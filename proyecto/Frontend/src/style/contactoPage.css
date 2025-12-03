@@ -1,0 +1,95 @@
+/* src/style/contactoPage.css */
+
+.contact-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle, rgba(0, 255, 234, 0.1) 10%, transparent 70%);
+  min-height: 70vh;
+  
+}
+
+.contact-form-wrapper {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  background: radial-gradient(circle, rgba(0, 255, 234, 0.1) 10%, transparent 70%);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  
+}
+
+
+
+.contact-form-wrapper h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.contact-form-wrapper p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* Reutilizamos .form-group de los modales de admin */
+.contact-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.contact-form .form-group input[type="text"],
+.contact-form .form-group input[type="email"],
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db; /* Borde gris */
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  background-color: #3b82f6; /* Azul */
+  color: white;
+}
+.contact-submit-btn:hover {
+  background-color: #2563eb;
+}
+
+.form-actions-contact {
+  text-align: center;
+}
+
+.contact-status-message {
+  margin-top: 15px;
+  color: #10b981; /* Verde éxito */
+  font-weight: 500;
+}

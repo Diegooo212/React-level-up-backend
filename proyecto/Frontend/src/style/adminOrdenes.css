@@ -1,0 +1,63 @@
+/* src/style/adminOrdenes.css */
+
+/* Reutilizamos muchas clases de adminProductos.css
+   Aquí solo definimos lo específico de la tabla de órdenes
+*/
+
+.admin-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-orders-table th,
+.admin-orders-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-orders-table th {
+  background-color: #f9fafb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* --- ESTILOS DE LOS "ESTADOS" (BADGES) --- */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 15px; /* Píldora redondeada */
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.status-badge.status-entregado {
+  background-color: #10b981; /* Verde */
+}
+.status-badge.status-enviado {
+  background-color: #f59e0b; /* Amarillo/Naranja */
+}
+.status-badge.status-procesando {
+  background-color: #3b82f6; /* Azul */
+}
+.status-badge.status-cancelado {
+  background-color: #ef4444; /* Rojo */
+}
+
+/* Botón de "Ver Detalles" */
+.admin-view-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+  background-color: #0ea5e9; /* Celeste */
+  color: white;
+}
+.admin-view-btn:hover {
+  background-color: #0284c7;
+}

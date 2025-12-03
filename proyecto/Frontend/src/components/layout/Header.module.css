@@ -1,0 +1,119 @@
+/* src/components/layout/Header.module.css */
+
+.navbarCustom {
+  background-color: #1f2833;
+  padding: 10px 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  font-family: 'Orbitron', sans-serif; 
+}
+
+.navbarBrand {
+  color: #66fcf1 !important; 
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #45a29e;
+}
+
+.navbarToggler {
+  border-color: #45a29e;
+}
+.navbarToggler:focus {
+  box-shadow: 0 0 10px #66fcf1;
+}
+.navbarToggler :global(.navbar-toggler-icon) {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(102, 252, 241, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Links de navegación (Desktop e Íconos) */
+.navLink {
+  color: #c5c6c7 !important;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-decoration: none; /* Añadido por si NavLink lo olvida */
+}
+.navLink:hover {
+  color: #66fcf1 !important;
+  text-shadow: 0 0 10px #66fcf1;
+}
+
+/* --- ¡ESTILO AÑADIDO! --- */
+/* Estilo para el link ACTIVO (usando NavLink) */
+/* El 'global' es necesario para anular el '.active' de Bootstrap */
+:global(.active) .navLink, /* Para desktop */
+:global(.active).offcanvasLink { /* Para móvil */
+  color: #66fcf1 !important;
+  text-shadow: 0 0 10px #66fcf1;
+  background-color: rgba(69, 162, 158, 0.1); /* Un sutil brillo de fondo */
+}
+/* ------------------------ */
+
+
+.logoutButton {
+  color: #c5c6c7;
+  border-color: #45a29e;
+}
+.logoutButton:hover {
+  background-color: #45a29e;
+  color: #0b0c10;
+}
+
+.adminLink {
+  background: #ff4500;
+  color: white !important;
+  border-radius: 8px;
+}
+.adminLink:hover {
+  background: #ff6a33;
+  color: white !important;
+  text-shadow: none;
+}
+
+.cartLink {
+  position: relative; 
+  padding: 0 10px;
+}
+.cartLink i { 
+  color: #66fcf1;
+  transition: 0.2s;
+}
+.cartLink:hover i {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #66fcf1;
+}
+
+.cartBadge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 0.65em;
+  padding: 3px 6px;
+  transform: translate(25%, -25%);
+}
+
+
+:global(.offcanvas).offcanvasMenu {
+  background-color: #1f2833; 
+  color: #c5c6c7;
+}
+.offcanvasMenu :global(.offcanvas-header) {
+  border-bottom: 1px solid #45a29e;
+}
+.offcanvasMenu :global(.offcanvas-title) {
+  color: #66fcf1;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Links dentro del Offcanvas */
+.offcanvasLink {
+  color: #c5c6c7 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  text-decoration: none; /* Añadido */
+}
+.offcanvasLink:hover {
+  color: #66fcf1 !important;
+}

@@ -1,0 +1,88 @@
+/* src/style/checkout.css */
+
+.checkout-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkout-section-title {
+  color: #00ffea; /* Color de acento */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #45a29e;
+}
+
+.summary-card {
+  background-color: #1f2833; /* Fondo oscuro para el resumen */
+  border: 1px solid #45a29e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: #c5c6c7;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #45a29e; /* Separador sutil */
+}
+.summary-item:last-child {
+  border-bottom: none;
+}
+.summary-item-name {
+  flex-grow: 1;
+  margin-right: 1rem; /* Espacio antes del precio */
+}
+.summary-item-name small {
+    color: #45a29e !important;; /* Gris claro, visible sobre fondo oscuro */
+    /* O puedes usar 'white', '#c5c6c7', o el color que prefieras */
+    font-size: 0.8rem;
+}
+.summary-item-price {
+  white-space: nowrap; /* Evita que el precio se parta */
+  color: #45a29e !important;;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+
+.summary-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #45a29e;
+}
+
+/* Clases para inputs y selects (puedes reutilizar las de tu CSS global si existen) */
+.checkout-form-label {
+  color: #c5c6c7;
+  margin-bottom: 0.3rem;
+}
+
+.checkout-form-control {
+  background-color: #0b0c10 !important;
+  color: #fff !important;
+  border: 1px solid #45a29e !important;
+}
+.checkout-form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(102, 252, 241, 0.25);
+}
+
+.checkout-form-select {
+  background-color: #0b0c10 !important;
+  color: #fff !important;
+  border: 1px solid #45a29e !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2366fcf1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+.checkout-form-select:disabled {
+   background-color: #333 !important;
+   opacity: 0.7;
+}
+
+.checkout-pay-button {
+    font-weight: bold;
+}

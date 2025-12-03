@@ -1,0 +1,10 @@
+/* src/components/layout/Footer.module.css */
+.footerContainer {
+  background: #1f2833;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px; 
+  color: #66fcf1;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "consola",
+    "name": "Consolas",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/PS4-Console-wDS4.png/1280px-PS4-Console-wDS4.png",
+    "link": "/productos/consola",
+    "description": "PS5, Xbox, Nintendo Switch y más."
+  },
+  {
+    "id": "accesorio",
+    "name": "Accesorios",
+    "img": "https://www.javanpro.com/wp-content/uploads/2020/06/VISTA-PREVIA-TE-4030B-1-300x300.png",
+    "link": "/productos/accesorio",
+    "description": "Auriculares, mandos, teclados, etc."
+  },
+  {
+    "id": "silla gamer",
+    "name": "Sillas Gamer",
+    "img": "https://png.pngtree.com/png-vector/20241114/ourmid/pngtree-stylish-blue-and-black-gamer-chair-png-image_14420477.png",
+    "link": "/productos/silla gamer",
+    "description": "Comodidad y estilo para tus partidas."
+  },
+  {
+    "id": "computador",
+    "name": "Computadores",
+    "img": "https://www.infordata.com.pe/wp-content/uploads/2022/01/draco-xd-2.png",
+    "link": "/productos/computador",
+    "description": "PC Gamer y notebooks de alto rendimiento."
+  }
+]

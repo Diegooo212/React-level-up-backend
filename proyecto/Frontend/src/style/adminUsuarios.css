@@ -1,0 +1,69 @@
+/* src/style/adminUsuarios.css */
+
+/* Definimos la tabla de usuarios */
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-users-table th {
+  background-color: #f9fafb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* Reutilizamos la clase .status-badge de adminOrdenes.css 
+  Si no la importaste globalmente, copia y pega también:
+*/
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+/* --- Badges de ROL --- */
+.status-badge.role-admin {
+  background-color: #a855f7; /* Morado */
+}
+.status-badge.role-user {
+  background-color: #6b7280; /* Gris */
+}
+
+/* --- Badges de ESTADO --- */
+.status-badge.status-activo {
+  background-color: #10b981; /* Verde (como Entregado) */
+}
+.status-badge.status-suspendido {
+  background-color: #ef4444; /* Rojo (como Cancelado) */
+}
+
+/* --- Botones de Acción --- */
+
+/* Reutilizamos .admin-edit-btn (Azul) de adminProductos.css */
+
+.admin-suspend-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 8px; /* Espacio entre botones */
+  background-color: #f59e0b; /* Naranja/Amarillo */
+  color: white;
+  transition: background-color 0.2s;
+}
+.admin-suspend-btn:hover {
+   background-color: #d97706;
+}

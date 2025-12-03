@@ -1,0 +1,137 @@
+/* src/style/profile.css */
+
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto; /* Centra el contenedor */
+}
+
+/* Usamos un estilo de tarjeta similar al de admin y checkout */
+.profile-card {
+  background-color: #1f2833;
+  border: 1px solid #45a29e;
+  border-radius: 15px;
+  padding: 30px;
+  color: #c5c6c7;
+}
+
+.profile-title {
+  color: #66fcf1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-section-title {
+  color: #00ffea;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #45a29e;
+}
+
+/* Reutilizamos las clases del checkout para los formularios */
+.profile-form-label {
+  color: #c5c6c7;
+  margin-bottom: 0.3rem;
+}
+
+.profile-form-control {
+  background-color: #0b0c10 !important;
+  color: #fff !important;
+  border: 1px solid #45a29e !important;
+}
+.profile-form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(102, 252, 241, 0.25);
+}
+.profile-form-control:disabled {
+    background-color: #333 !important;
+    opacity: 0.7;
+}
+
+.profile-form-select {
+  background-color: #0b0c10 !important;
+  color: #fff !important;
+  border: 1px solid #45a29e !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2366fcf1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+.profile-form-select:disabled {
+   background-color: #333 !important;
+   opacity: 0.7;
+}
+
+/* --- Estilos para el Historial de Compras (Accordion) --- */
+.history-accordion {
+  /* Usa variables de Bootstrap para que coincida con el tema oscuro */
+  --bs-accordion-color: #c5c6c7;
+  --bs-accordion-bg: #1f2833;
+  --bs-accordion-border-color: #45a29e;
+  --bs-accordion-button-bg: #2c3e50; /* Un poco más claro que el fondo */
+  --bs-accordion-button-active-bg: #45a29e;
+  --bs-accordion-button-active-color: #0b0c10;
+  --bs-accordion-button-focus-box-shadow: 0 0 0 0.2rem rgba(102, 252, 241, 0.25);
+  --bs-accordion-body-padding: 1.25rem;
+  --bs-accordion-btn-color: #66fcf1; /* Color del texto del botón */
+}
+
+.history-accordion .accordion-button {
+  font-weight: bold;
+}
+
+.history-accordion .accordion-button::after {
+  /* Cambia el color del icono +/- de Bootstrap */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2366fcf1'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.history-accordion .accordion-button:not(.collapsed)::after {
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300ffea'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+   transform: rotate(-180deg);
+}
+
+.history-item-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.history-item-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+}
+
+.history-item-list .list-group-item {
+  background-color: #1f2833 !important; /* Asegura un fondo oscuro para cada item */
+  border-color: #2c3e50 !important; /* Un borde sutil */
+  margin-bottom: 5px; /* Espacio entre items */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 15px; /* Relleno */
+  display: flex; /* Para alinear imagen y texto */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.history-item-list .list-group-item .item-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.history-item-list .list-group-item span {
+  color: #c5c6c7 !important; /* Color claro para el texto del producto */
+}
+
+.history-item-list .list-group-item .item-name {
+  font-weight: bold;
+  color: #66fcf1 !important; /* Resalta el nombre del producto */
+  font-size: 1.1em;
+}
+
+.history-item-list .list-group-item .item-price {
+  color: #00ffea !important; /* Resalta el precio */
+  font-weight: 600;
+}
+
+.history-item-image {
+  width: 60px; /* Tamaño de la imagen del producto */
+  height: 60px;
+  object-fit: contain; /* Ajusta la imagen sin recortar */
+  margin-right: 15px; /* Espacio a la derecha del texto */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  border: 1px solid #45a29e;
+  padding: 3px;
+}

@@ -1,0 +1,12 @@
+/* src/components/sections/CategorySection.module.css */
+.categorySection {
+  padding: 50px 0; 
+  background-color: transparent; 
+}
+
+.sectionTitle {
+  text-align: center;
+  color: #66fcf1; 
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
