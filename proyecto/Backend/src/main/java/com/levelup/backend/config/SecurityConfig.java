@@ -21,6 +21,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -58,17 +59,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            // 1. ACTIVAMOS CORS AQUÍ
-            .cors(cors -> cors.configurationSource(corsConfigurationSource())) 
+            // 1. Configuración CORS explícita
+            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf.disable())
             .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/products/**").permitAll()
+                .requestMatchers("/api/products/**").permitAll() // Asegúrate que esto coincide con tus rutas
                 .requestMatchers("/api/categories/**").permitAll()
-                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll() // Docs de API
+                .anyRequest().authenticated() // Todo lo demás requiere login
             );
 
         http.authenticationProvider(authenticationProvider());
@@ -77,17 +78,17 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // 2. DEFINIMOS LA REGLA DE CORS
+    // 2. Bean de Configuración CORS Global
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Permitir explícitamente a tu Frontend (React)
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3001"));
-        // Permitir todos los métodos (GET, POST, etc.)
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        // Permitir todos los encabezados (Authorization, Content-Type, etc.)
-        configuration.setAllowedHeaders(Arrays.asList("*"));
-        configuration.setAllowCredentials(true);
+        
+        // IMPORTANTE: Usa setAllowedOriginPatterns para mayor compatibilidad
+        configuration.setAllowedOriginPatterns(List.of("http://localhost:3000")); 
+        
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin"));
+        configuration.setAllowCredentials(true); // Permitir cookies/tokens
         
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
